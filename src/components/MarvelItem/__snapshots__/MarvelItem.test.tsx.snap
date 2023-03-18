@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MarvelItem > matches the snapshot 1`] = `
+<li
+  class="marvel-item"
+>
+  <div
+    class="marvel-item__img-wrap"
+  >
+    <img
+      alt="Spider-Man"
+      class="marvel-item__img"
+      src="https://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784.jpg"
+    />
+  </div>
+  <div
+    class="marvel-item__info"
+  >
+    <div
+      class="marvel-item__name"
+    >
+      Spider-Man
+    </div>
+    <a
+      class="marvel-item__link"
+      href="http://marvel.com/comics/characters/1009610/spider-man?utm_campaign=apiRef&utm_source=0d3db3a575ecd5ce4491ee1295b966c5"
+      rel="noreferrer"
+      target="_blank"
+    >
+      link
+    </a>
+  </div>
+</li>
+`;
