@@ -1,6 +1,15 @@
+@import 'normalize.css';
+
+* {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 body {
-  background: white;
-  background-image: radial-gradient(black 1px, transparent 0);
+  background: black;
+  background-image: radial-gradient(white 1px, transparent 0);
   background-size: 40px 40px;
   background-position: -19px -19px;
+  color: white;
+  padding: 8px 16px;
 }

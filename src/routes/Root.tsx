@@ -1,19 +1,34 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+import Header from '../components/Header/Header';
 
-class Root extends React.Component {
+export const TitleContext = React.createContext<((title: string) => void) | null>(null);
+
+export type Props = {
+  title: string;
+};
+
+class Root extends React.Component<Readonly<unknown>, Props> {
+  state = {
+    title: 'Main page',
+  };
+
   setPageTitle(title: string) {
-    console.log(title);
+    this.setState(() => ({ title: title }));
   }
+
   render() {
     return (
-      <>
-        <h1>page title</h1>
+      <div className="root">
+        <Header title={this.state.title} />
         <div className="content">
-          <Outlet context={[this.setPageTitle]} />
+          <TitleContext.Provider value={(title) => this.setPageTitle(title)}>
+            <Outlet />
+          </TitleContext.Provider>
         </div>
-      </>
+      </div>
     );
   }
 }
+
 export default Root;
