@@ -8,8 +8,8 @@ type Props = {
 };
 
 export default class Header extends React.Component<Props> {
-  navClass({ isActive, isPending }: { isActive: boolean; isPending: boolean }) {
-    return isPending ? 'pending' : isActive ? 'active' : '';
+  navClass({ isActive }: { isActive: boolean; isPending: boolean }) {
+    return isActive ? 'active' : '';
   }
 
   render() {

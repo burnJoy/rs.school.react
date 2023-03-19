@@ -4,7 +4,7 @@ import MarvelItem from '../MarvelItem/MarvelItem';
 
 import './MarvelList.scss';
 
-type Props = {
+export type Props = {
   heros: Hero[];
   isLoading: boolean;
 };
