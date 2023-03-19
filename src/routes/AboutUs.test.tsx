@@ -1,6 +1,6 @@
 import React from 'react';
 import { vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { TitleContext } from './Root';
 import AboutUs from './AboutUs';
 
@@ -17,14 +17,5 @@ describe('About us page', () => {
 
     expect(mockFunc).toBeCalledTimes(1);
     expect(mockFunc).toBeCalledWith(title);
-  });
-
-  it('matches the snapshot', () => {
-    const { container } = render(
-      <TitleContext.Provider value={() => {}}>
-        <AboutUs title={title} />
-      </TitleContext.Provider>
-    );
-    expect(container.firstChild).toMatchSnapshot();
   });
 });

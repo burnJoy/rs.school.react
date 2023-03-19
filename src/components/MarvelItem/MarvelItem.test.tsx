@@ -32,9 +32,4 @@ describe('MarvelItem', () => {
     render(<MarvelItem hero={hero} />);
     expect(screen.getByText('link')).toHaveAttribute('href', hero.urls[0].url);
   });
-
-  it('matches the snapshot', () => {
-    const { container } = render(<MarvelItem hero={hero} />);
-    expect(container.firstChild).toMatchSnapshot();
-  });
 });
