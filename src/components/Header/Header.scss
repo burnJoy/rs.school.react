@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  margin-left: 16px;
+
+  a {
+    margin: 0 8px;
+  }
+
+  a.active {
+    color: red;
+  }
+}
