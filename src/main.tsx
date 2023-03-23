@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
 import MainPage from './routes/MainPage';
 import AboutUs from './routes/AboutUs';
+import FeedBack from './routes/FeedBack';
 import PageNotFound from './routes/PageNotFound';
 
 import './index.css';
@@ -18,8 +19,12 @@ const router = createBrowserRouter([
         element: <MainPage title="Main Page" />,
       },
       {
-        path: 'about/',
+        path: '/about/',
         element: <AboutUs title="About Us" />,
+      },
+      {
+        path: '/feedback/',
+        element: <FeedBack title="Feed back page" />,
       },
       {
         path: '*',
