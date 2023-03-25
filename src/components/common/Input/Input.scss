@@ -1,4 +1,8 @@
 .input {
+  &__element {
+    width: 250px;
+  }
+
   &__error {
     color: red;
   }

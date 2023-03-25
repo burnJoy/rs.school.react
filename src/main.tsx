@@ -4,7 +4,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
 import MainPage from './routes/MainPage';
 import AboutUs from './routes/AboutUs';
-import FeedBack from './routes/FeedBack';
+import Feedback from './routes/Feedback/Feedback';
 import PageNotFound from './routes/PageNotFound';
 
 import './index.css';
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
       },
       {
         path: '/feedback/',
-        element: <FeedBack title="Feed back page" />,
+        element: <Feedback title="Feed back page" />,
       },
       {
         path: '*',
