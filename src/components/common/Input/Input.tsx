@@ -1,15 +1,13 @@
 import React from 'react';
 import './Input.scss';
 
-import type { FieldType } from '../../FeedBackForm/FeedBackForm';
-
 type Props = {
-  name: FieldType;
+  name: string;
   label?: string;
   type?: 'text' | 'date';
   value: string;
   error?: string;
-  onChange: (name: FieldType, value: string) => void;
+  onChange: (name: string, value: string) => void;
 };
 
 export default class Input extends React.Component<Props> {
@@ -19,7 +17,7 @@ export default class Input extends React.Component<Props> {
 
   changeHandler = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { name, onChange } = this.props;
-    onChange(name as FieldType, evt.target.value);
+    onChange(name, evt.target.value);
   };
 
   render() {
@@ -36,7 +34,11 @@ export default class Input extends React.Component<Props> {
             onChange={this.changeHandler}
           />
         </label>
-        {error && <div className="input__error">{error}</div>}
+        {error && (
+          <div className="input__error" data-testid="error">
+            {error}
+          </div>
+        )}
       </div>
     );
   }

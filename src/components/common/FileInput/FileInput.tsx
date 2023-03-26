@@ -1,12 +1,11 @@
 import React from 'react';
-import type { FieldType } from '../../FeedBackForm/FeedBackForm';
 
 type Props = {
-  name: FieldType;
+  name: string;
   label?: string;
   error: string;
   accept?: string;
-  onChange: (name: FieldType, value: string) => void;
+  onChange: (name: string, value: string) => void;
 };
 
 export default class FileInput extends React.Component<Props> {
@@ -14,7 +13,7 @@ export default class FileInput extends React.Component<Props> {
     const { name, onChange } = this.props;
     const file = evt.target.files?.[0];
     if (!file) return;
-    onChange(name as FieldType, file.name);
+    onChange(name, file.name);
   };
 
   render() {

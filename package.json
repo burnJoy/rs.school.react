@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "npm run lint && vite build",
     "preview": "vite preview",
-    "lint": "npx eslint src/**/*.ts src/**/*.tsx",
+    "lint": "npx eslint src && npx tsc --noEmit",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },

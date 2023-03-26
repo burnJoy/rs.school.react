@@ -58,12 +58,12 @@ export default class FeedBackForm extends React.Component<Props> {
   state = defaultState;
   formRef = React.createRef<HTMLFormElement>();
 
-  handleChange = (name: FieldType, value: string | string[]) => {
+  handleChange = (name: string, value: string | string[]) => {
     this.setState({
       fields: {
         ...this.state.fields,
         [name]: {
-          ...this.state.fields[name],
+          ...this.state.fields[name as FieldType],
           value: value,
         },
       },

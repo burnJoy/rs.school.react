@@ -1,20 +1,19 @@
 import React from 'react';
-import type { FieldType } from '../../FeedBackForm/FeedBackForm';
 
 import './RadioGroup.scss';
 
 type Props = {
-  name: FieldType;
+  name: string;
   label?: string;
   options: string[];
   error: string;
-  onChange: (name: FieldType, value: string) => void;
+  onChange: (name: string, value: string) => void;
 };
 
 export default class RadioGroup extends React.Component<Props> {
   changeHandler = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const { name, onChange } = this.props;
-    onChange(name as FieldType, evt.target.value);
+    onChange(name, evt.target.value);
   };
 
   render() {

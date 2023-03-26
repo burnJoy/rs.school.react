@@ -1,15 +1,13 @@
 import React from 'react';
 import Checkbox from '../Checkbox/Checkbox';
 
-import type { FieldType } from '../../FeedBackForm/FeedBackForm';
-
 type Props = {
   label: string;
-  name: FieldType;
+  name: string;
   value: string[];
   error: string;
   options: string[];
-  onChange: (name: FieldType, value: string[]) => void;
+  onChange: (name: string, value: string[]) => void;
 };
 
 export default class CheckboxGroup extends React.Component<Props> {
@@ -17,9 +15,9 @@ export default class CheckboxGroup extends React.Component<Props> {
     const { name, value, onChange } = this.props;
     const index = value.indexOf(option.target.value);
     if (index === -1) {
-      onChange(name as FieldType, [...value, option.target.value]);
+      onChange(name, [...value, option.target.value]);
     } else {
-      onChange(name as FieldType, [...value.filter((v, idx) => idx !== index)]);
+      onChange(name, [...value.filter((v, idx) => idx !== index)]);
     }
   };
 

@@ -22,6 +22,7 @@ const router = createBrowserRouter([
         path: '/about/',
         element: <AboutUs title="About Us" />,
       },
+
       {
         path: '/feedback/',
         element: <Feedback title="Feed back page" />,
