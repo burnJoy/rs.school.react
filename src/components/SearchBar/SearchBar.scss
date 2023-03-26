@@ -1,0 +1,21 @@
+.search-bar {
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+
+  &__input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    border: 2px solid #9cadbb;
+    border-radius: 100px;
+    font-size: 16px;
+    padding: 8px 12px;
+    color: inherit;
+  }
+
+  &__button {
+    margin-left: 8px;
+    cursor: pointer;
+  }
+}

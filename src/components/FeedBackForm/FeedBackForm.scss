@@ -1,0 +1,13 @@
+.feed-form {
+  &__success {
+    color: rgb(81, 234, 81);
+  }
+
+  &__element {
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
