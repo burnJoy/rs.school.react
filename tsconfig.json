@@ -6,7 +6,7 @@
       "esnext",
       "dom.iterable"
     ],
-    "jsx": "react",
+    "jsx": "react-jsx",
     "module": "esnext",
     "moduleResolution": "node",
     "noImplicitAny": true,
