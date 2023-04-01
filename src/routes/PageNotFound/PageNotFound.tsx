@@ -1,5 +1,5 @@
 import React from 'react';
-import { TitleContext, type Props } from './Root';
+import { TitleContext, type Props } from '../Root';
 
 export default class NotFoundPage extends React.Component<Props> {
   static contextType = TitleContext;

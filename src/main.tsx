@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Root from './routes/Root';
-import MainPage from './routes/MainPage';
-import AboutUs from './routes/AboutUs';
+import MainPage from './routes/MainPage/MainPage';
+import AboutUs from './routes/AboutUs/AboutUs';
 import Feedback from './routes/Feedback/Feedback';
-import PageNotFound from './routes/PageNotFound';
+import PageNotFound from './routes/PageNotFound/PageNotFound';
 
 import './index.css';
 

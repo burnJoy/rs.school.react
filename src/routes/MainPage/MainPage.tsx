@@ -1,10 +1,10 @@
 import React from 'react';
-import apiMarvel from '../api/apiMarvel';
+import apiMarvel from '../../api/apiMarvel';
 
-import { TitleContext, type Props } from './Root';
-import SearchBar from '../components/SearchBar/SearchBar';
-import MarvelList from '../components/MarvelList/MarvelList';
-import type { Hero } from '../types';
+import { TitleContext, type Props } from '../Root';
+import SearchBar from '../../components/SearchBar/SearchBar';
+import MarvelList from '../../components/MarvelList/MarvelList';
+import type { Hero } from '../../types';
 
 type State = {
   searchQuery: string;

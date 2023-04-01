@@ -1,8 +1,8 @@
 import React from 'react';
 import { vi } from 'vitest';
 import { render } from '@testing-library/react';
-import { TitleContext } from './Root';
-import AboutUs from './AboutUs';
+import { TitleContext } from '../Root';
+import AboutUs from '../AboutUs/AboutUs';
 
 describe('About us page', () => {
   const title = 'test title for about us page';

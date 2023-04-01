@@ -1,12 +1,11 @@
-import React from 'react';
 import { render, screen, act } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import apiMarvel from '../api/apiMarvel';
+import apiMarvel from '../../api/apiMarvel';
 import MainPage from './MainPage';
-import { TitleContext } from './Root';
-import { Mock, vi } from 'vitest';
+import { TitleContext } from '../Root';
+import { type Mock, vi } from 'vitest';
 
-vi.mock('../api/apiMarvel', () => ({
+vi.mock('../../api/apiMarvel', () => ({
   default: {
     getList: vi.fn(() => []),
   },
