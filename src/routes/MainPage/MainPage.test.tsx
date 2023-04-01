@@ -1,4 +1,4 @@
-import { render, screen, act } from '@testing-library/react';
+import { render, screen, act, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import apiMarvel from '../../api/apiMarvel';
 import MainPage from './MainPage';
@@ -59,7 +59,7 @@ describe('MainPage', () => {
       { id: '2', name: 'Iron Man', thumbnail: { path: '', extension: '' }, urls: [{ url: '' }] },
       { id: '3', name: 'Hulk', thumbnail: { path: '', extension: '' }, urls: [{ url: '' }] },
     ];
-    mockGetList.mockResolvedValueOnce(heroList);
+    mockGetList.mockResolvedValue(heroList);
 
     render(
       <TitleContext.Provider value={() => {}}>
@@ -70,16 +70,14 @@ describe('MainPage', () => {
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button');
 
-    await act(async () => {
-      await userEvent.type(input, 'man');
-      await userEvent.click(button);
-    });
+    await userEvent.type(input, 'man');
+    await userEvent.click(button);
 
-    const marvelList = screen.getByRole('list');
+    // first call on load
+    await waitFor(() => expect(mockGetList).toHaveBeenCalledTimes(2));
+    await waitFor(() => expect(screen.getByRole('list')).toBeInTheDocument());
+
     const marvelItems = screen.getAllByRole('listitem');
-
-    expect(marvelList).toBeInTheDocument();
     expect(marvelItems).toHaveLength(2);
-    expect(mockGetList).toHaveBeenCalledTimes(1);
   });
 });
